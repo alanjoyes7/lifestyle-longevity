@@ -979,6 +979,12 @@ def run_classification(
 
     model.fit(X_train, y_train)
 
+    # Display the actual input features used
+    print("\n========== FEATURES USED ==========")
+    print("Total features:", len(available_features))
+    print("Feature names:", available_features)
+    print("===================================\n")
+
     predictions = model.predict(X_test)
 
     accuracy = accuracy_score(
